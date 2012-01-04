@@ -1,0 +1,7 @@
+cal <%=@cal_name%> : 
+  <select name="<%=@cal_name%>_cal_list">
+	<option value="-">default</option>
+    <% for cal_file in @cal_files %>
+      <option value="<%= cal_file %>"><%= cal_file %></option>
+    <% end %>
+  </select>

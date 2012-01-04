@@ -1,0 +1,7 @@
+user Head:-
+  <select name="user_list">
+    <option value="-">---</option>
+    <% for user in @users %>
+      <option value="<%= user %>"><%= user %></option>
+    <% end %>
+  </select>

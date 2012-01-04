@@ -1,0 +1,28 @@
+<h1>Done!</h1>
+<textarea rows="20" cols="100">
+<% if @sw_update_ok then %>
+<% @sw_results_file.each do |f| %>
+<%= f %>
+<% end %>
+<% else %>
+Software updated : <%= @sw_update_ok %>
+<% end %>
+--------------------------------------------
+<% if @cal_update_ok then %>
+<% @cal_results_file.each do |f| %>
+<%= f %>
+<% end %>
+<% else %>
+Cal updated : <%= @cal_update_ok %>
+<% end %>
+</textarea>
+<br/>
+
+Open : -
+<ul>
+  <li><a href="//<%= @build_file %>" target="_blank">Full build log (<%= @build_file %>)</a></li>
+  <li><a href="//<%= @hosts[0] %>/project/logs/ecmmain.txt" target="_blank">ecmmain.txt</a></li>
+  <li><a href="//<%= @hosts[1] %>/project/logs/tgmain.txt" target="_blank">tgmain.txt</a></li>
+  <li><a href="//<%= @hosts[1] %>/project/logs/s2threat1.txt" target="_blank">s2threat1.txt</a></li>
+  <li><a href="//<%= @hosts[1] %>/project/logs/s2threat2.txt" target="_blank">s2threat2.txt</a></li>
+</ul>

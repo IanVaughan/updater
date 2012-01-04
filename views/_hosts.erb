@@ -1,0 +1,8 @@
+host:
+  <select name="host">
+    <option value="-">---</option>
+    <% for host in @hosts %>
+      <option value="<%= host %>"><%= host %></option>
+    <% end %>
+  </select>
+

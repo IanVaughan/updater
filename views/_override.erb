@@ -1,0 +1,7 @@
+config:
+  <select name="override_select">
+    <option value="-">---</option>
+    <% for ov in @override_filelist %>
+      <option value="<%= ov %>"><%= ov %></option>
+    <% end %>
+  </select>

@@ -1,0 +1,26 @@
+<h1>Scorpion2 Host Updater...</h1>
+
+<form method="get" action="/version">
+
+<p>
+<%= erb :_hosts %>
+<%= erb :_versions %>
+<%= erb :_users %>
+<%= erb :_override %>
+</p>
+
+<% for @cal_name in @cal_names %>
+  <%= erb :_cal %> <br/>
+<% end %>
+
+<br/>
+
+<input type="checkbox" name="update_host" value="1" />Update software<br/>
+<input type="checkbox" name="update_cal" value="1" />Update cal<br/>
+<input type="checkbox" name="update_params[]" value="-l" />Start the software<br/>
+<br/>
+
+<input type="submit" value="          Go!          "/>
+</form>
+
+<%= erb :_footer %>

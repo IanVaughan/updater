@@ -1,0 +1,7 @@
+version:
+  <select name="version_list">
+   <option value="-">---</option>
+    <% for ver in @versions %>
+      <option value="<%= ver %>"><%= ver %></option>
+    <% end %>
+  </select>
